@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Aplikasi Penjualan Barang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="common.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="transaksi.html">Transaksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5 content-section">
+        <h1 class="text-center mb-5 animate__animated animate__fadeInDown">Tentang Aplikasi Kami</h1>
+
+        <!-- Deskripsi Aplikasi -->
+        <section class="about-section mb-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-card animate__animated animate__zoomIn">
+                        <h2 class="mb-4">📦 Aplikasi Penjualan Barang Modern</h2>
+                        <p class="lead">
+                            Aplikasi ini dirancang untuk membantu UMKM dan bisnis retail dalam mengelola penjualan
+                            secara digital dengan fitur lengkap dan antarmuka yang user-friendly.
+                        </p>
+                        <div class="highlight-bar"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image animate__animated animate__fadeInRight">
+                        <img src="dashboard.jpg" alt="Dashboard Aplikasi" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fitur Unggulan -->
+        <section class="features-section mb-5">
+            <h2 class="text-center mb-5 animate__animated animate__fadeIn">Keunggulan Aplikasi</h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card animate__animated animate__slideInLeft">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Proses Cepat</h3>
+                        <p>Transaksi penjualan dapat dilakukan dalam hitungan detik dengan sistem yang responsif</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card animate__animated animate__slideInUp">
+                        <div class="feature-icon">📈</div>
+                        <h3>Analisis Real-Time</h3>
+                        <p>Pantau perkembangan penjualan melalui dashboard analisis interaktif</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card animate__animated animate__slideInRight">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Keamanan Data</h3>
+                        <p>Data transaksi dan inventori terlindungi dengan sistem enkripsi modern</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi Misi -->
+        <section class="vision-section">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="vision-card animate__animated animate__flipInX">
+                        <h3>🎯 Visi Kami</h3>
+                        <p>Menjadi platform manajemen penjualan terdepan yang mendukung pertumbuhan bisnis UMKM di era
+                            digital</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mission-card animate__animated animate__flipInY">
+                        <h3>✨ Misi Kami</h3>
+                        <ul>
+                            <li>Menyediakan solusi manajemen penjualan terintegrasi</li>
+                            <li>Menyederhanakan proses operasional bisnis</li>
+                            <li>Memberikan layanan berbasis teknologi terkini</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Aplikasi Penjualan Barang. All rights reserved.</p>
+            <p class="mt-2">Dikembangkan dengan ❤️ oleh Tim Pengembang</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animasi Scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const animateElements = document.querySelectorAll('.animate__animated');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.visibility = 'visible';
+                        entry.target.classList.add(entry.target.dataset.animation);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animateElements.forEach(element => {
+                element.style.visibility = 'hidden';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>
